@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  
+
+  <main class="px-3">
+    <h1>Multiple System Application</h1>
+    <p></p>
+    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div id="myapp">
+                <img src="{% static 'images/vote.jpg' %}" alt="">
+                <p></p>
+                {% if request.user.user_type == "2" %}
+                <button type="submit"><a href="{% url 'evoting:cHome-page' %}">E-Voting</a></button>
+                {% elif request.user.user_type == "3"  %}
+                <button type="submit"><a href="{% url 'evoting:vHome-page' %}">E-Voting</a></button>
+                {% else %}
+                <button type="submit"><a href="{% url 'account:register' %}">E-Voting</a></button>
+                {% endif %}
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div id="myapp">
+                <img src="{% static 'images/ewallet.jpg' %}" alt="">
+                <p></p>
+                <button type="submit"><a href="#">E-Wallet</a></button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="myapp">
+                <img src="{% static 'images/attedance.jpg' %}" alt="">
+                <p></p>
+                <button type="submit"><a href="#">E-Attendance</a></button>
+            </div>
+        </div>
+    
+  </main>
+
+  
+</div>
+
+{% endblock %}

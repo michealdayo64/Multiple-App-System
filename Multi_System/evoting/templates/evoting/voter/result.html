@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'snippet/header.html' %}
+{% include 'snippet/_messages.html' %}
+
+<div class="container">
+    <div class="row" style="color: black;">
+    <div class="col-sm-3" style="padding-top: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Total Users</h5>
+          
+          <button class="btn btn-danger" style="cursor: none;"><h1>{{ total_users }}</h1></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3" style="padding-top: 30px;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Registered Candidates</h5>
+            
+            <button class="btn btn-secondary" style="cursor: none;"><h1>{{ registered_candidate }}</h1></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3" style="padding-top: 30px;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Registered Voters</h5>
+            
+            <button class="btn btn-primary" style="cursor: none;"><h1>{{ registered_voters }}</h1></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3" style="padding-top: 30px;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Overall Votes</h5>
+            
+            <button class="btn btn-success" style="cursor: none;"><h1>{{ total_voters }}</h1></button>
+          </div>
+        </div>
+      </div>
+  </div>
+<br>
+<br>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S/N</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'snippet/header.html' %}
+{% include 'snippet/_messages.html' %}
+<div class="container">
+    <h1>All Aspiring Positions</h1>
+<div class="row" style="color: black;">
+    {% for can in candidData %}
+    <div class="col-sm-4" style="padding-top: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ can.name }}</h5>
+          
+          <a href="{% url 'evoting:vDetail-page' can.id %}" class="btn btn-primary">View Candidates</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div> 
+{% endblock %}

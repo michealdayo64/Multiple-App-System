@@ -1,0 +1,40 @@
+<header class="mb-auto p-5">
+    <div class="d-flex flex-row justify-content-around">
+      
+      <h3 class="float-md-start mb-0" style="color: white;">
+        {% if request.user.user_type == "2" %}
+        <a class="nav-link fw-bold py-1 px-0" style="color: white;" href="{% url 'evoting:cHome-page' %}">E-Voting</a>
+        {% elif request.user.user_type == "3" %}
+        <a class="nav-link fw-bold py-1 px-0 active" style="color: white;" href="{% url 'evoting:vHome-page' %}">E-Voting</a>
+        {% endif %}
+        </h3>
+
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        {% if request.user.user_type == "2" %}
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'evoting:cHome-page' %}">Home</a>
+        {% elif request.user.user_type == "3" %}
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'evoting:vHome-page' %}">Home</a>
+        {% endif %}
+
+        {% if request.user.user_type == "2" %}
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'account:cUpdate-page' %}">Update</a>
+        {% elif request.user.user_type == "3" %}
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'account:vUpdate-page' %}">Update</a>
+        {% endif %}
+
+
+        {% if request.user.is_authenticated %}
+        <a class="nav-link fw-bold py-1 px-0" href="{% url 'account:logout' %}">Logout</a>
+        
+        {% endif %}
+        <span class="fw-bold py-1 px-0">
+          <p>
+            ({{ request.user.username }} Is Logged In)
+          </p>
+          
+        </span>
+        
+      </nav>
+      
+    </div>
+  </header>
