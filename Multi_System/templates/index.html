@@ -9,10 +9,14 @@
   <main class="px-3">
     <h1>Multiple System Application</h1>
     <p></p>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">This is a simple e-voting system just for Presidential, Senate President, Senate and Governor</p>
     <br>
     <br>
     <div class="row">
+        <div class="col-md-4">
+            
+            
+        </div>
         <div class="col-md-4">
             <div id="myapp">
                 <img src="{% static 'images/vote.jpg' %}" alt="">
@@ -25,21 +29,9 @@
                 <button type="submit"><a href="{% url 'account:register' %}">E-Voting</a></button>
                 {% endif %}
             </div>
-            
         </div>
         <div class="col-md-4">
-            <div id="myapp">
-                <img src="{% static 'images/ewallet.jpg' %}" alt="">
-                <p></p>
-                <button type="submit"><a href="#">E-Wallet</a></button>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div id="myapp">
-                <img src="{% static 'images/attedance.jpg' %}" alt="">
-                <p></p>
-                <button type="submit"><a href="#">E-Attendance</a></button>
-            </div>
+        
         </div>
     
   </main>

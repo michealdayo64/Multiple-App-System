@@ -2,9 +2,8 @@
 {% load static %}
 {% block content %}
 
-
-
-<div class="wrapper">
+<br>
+<div class="wrapper" style="height: 550px;">
     <div class="logo">
         <img src="{% static 'images/accRd.jpg' %}" alt="">
     </div>
@@ -57,6 +56,8 @@
         <a href="#">Forget password?</a> or <a href="{% url 'account:login' %}">Sign in</a>
     </div>
 </div>
+
+
 
 <script src="{% static 'js/register.js' %}"></script>
 

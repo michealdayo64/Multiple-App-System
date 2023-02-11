@@ -8,5 +8,5 @@ urlpatterns = [
     path('vHome_page/', vHome_page, name = "vHome-page"),
     path('vDetail_page/<id>/', vDetail_page, name = "vDetail-page"),
     path('vote_candidate/<id>/', voteCandidate, name = "vote-candidate"),
-    path('admimDashboard', admimDashboard, name = "admimDashboard")
+    path('admimDashboard/', admimDashboard, name = "admimDashboard")
 ]
